@@ -1,4 +1,4 @@
-
+#! /user/bin/env python3
 from PIL import Image, ImageDraw, ImageFont
  
 def generateImage(size, date, hourMin, lineOne, lineTwo):

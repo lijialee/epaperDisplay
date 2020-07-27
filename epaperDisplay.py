@@ -1,6 +1,9 @@
-from config import epd2in7
+#!/usrbin/env python3
+import os
+os.chdir('/home/pi/Documents/epaperDisplay')
+
+from config import epd2in7, imageGenerator
 from PIL import Image, ImageDraw, ImageFont
-import imageGenerator
 import time
 
 lineOne = ""
@@ -25,7 +28,7 @@ def updateClock():
     print("Got Img")
     epd.display(epd.getbuffer(img))
     print("updated")
-    time.sleep(10)
+    time.sleep(60)
     print("Next Cycle")
     updateClock()
     
