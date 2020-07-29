@@ -26,7 +26,7 @@ def generateImage(size, date, hourMin, lineOne, lineTwo, refGreen, refYellow, re
         symbImg = Image.open('src/downArrow.png')
         img.paste(symbImg,(222,125))
     elif lineOne == refRed:
-        statusImg.text((5,128), lineOne, font=statusFnt, fill=(0,0,0))
+        statusImg.text((0,115), lineOne, font=statusFnt, fill=(0,0,0))
         symbImg = Image.open('src/willBack.png')
         symbImg = symbImg.resize((60,60))
         img.paste(symbImg,(200,115))

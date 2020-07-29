@@ -14,7 +14,7 @@ greenMessage2 = ""
 yellowMessage1 = "receiving parts"
 yellowMessage2 = " press the button"
 redMessage1 = "will back soon"
-redMessage2 = ""
+redMessage2 = "left at"
 
 lineOne = ""
 lineTwo = ""
@@ -108,8 +108,11 @@ def redLedPressed():
         yellowLed.off()
         greenLed.off()
         redLed.pulse()
+        hour_number = time.strftime("%H")
+        min_number = time.strftime("%M")
+        hourMin = hour_number + ":" + min_number
         lineOne = redMessage1
-        lineTwo = redMessage2
+        lineTwo = redMessage2 + " " + hourMin
         updateEpaper()
 
 def allLedOn():
